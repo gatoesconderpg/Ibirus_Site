@@ -1,0 +1,168 @@
+/* Import da fonte estilo pixel art do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display.swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.3;
+    text-align: center;
+    font-size: 14px;
+}
+body.modal-open { overflow: hidden; }
+
+/* ============================================= */
+/* ... (Todo o seu CSS anterior, sem alterações) ... */
+/* ============================================= */
+.main-header { position: relative; width: 100%; height: 25vh; background-color: #000; overflow: hidden; }
+.slideshow-container, .slide-image { width: 100%; height: 100%; }
+.slide-image { position: absolute; top: 0; left: 0; object-fit: cover; object-position: center center; transform: translateY(-100%); transition: transform 1.5s ease-in-out; }
+.slide-image.active { transform: translateY(0%); z-index: 1; }
+.slide-image.exiting { transform: translateY(100%); z-index: 0; }
+.header-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; width: 80%; max-width: 500px; background-color: rgba(10, 10, 10, 0.75); padding: 8px 15px; border-radius: 4px; border: 1px solid #444; }
+.header-overlay h1, .header-overlay p { color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+.header-overlay h1 { font-size: 1.2em; margin: 0 0 8px 0; }
+.header-overlay p { font-size: 0.6em; line-height: 1.4; margin: 0; }
+.internal-page .main-header { height: 15vh; }
+.main-nav { background-color: #1e1e1e; border-bottom: 1px solid #5a5a5a; padding: 4px 0; position: sticky; top: 0; z-index: 1000; }
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
+.main-nav li { margin: 0 5px; }
+.main-nav a { color: #ffee00; text-decoration: none; font-size: 0.55em; padding: 5px 8px; border-radius: 3px; }
+.main-nav a:hover, .main-nav a.active { background-color: #ffee00; color: #1e1e1e; }
+.main-nav a.active { cursor: default; }
+.page-container { display: flex; max-width: 1100px; margin: 15px auto; padding: 0 15px; gap: 20px; }
+.dev-sidebar { flex-basis: 250px; flex-shrink: 0; background-color: #1e1e1e; padding: 10px; border: 1px solid #5a5a5a; border-radius: 4px; }
+.dev-sidebar h3 { font-size: 1em; color: #ffee00; margin-top: 0; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #5a5a5a; }
+.progress-item { margin-bottom: 12px; text-align: left; }
+.progress-item p { margin: 0 0 4px 0; font-size: 0.7em; color: #ccc; }
+.progress-bar-container { width: 100%; background-color: #fff; border: 2px solid #000; border-radius: 4px; height: 18px; box-sizing: border-box; position: relative; overflow: hidden; }
+.progress-bar { background-color: #28a745; height: 100%; color: #fff; font-size: 0.65em; text-align: center; line-height: 14px; text-shadow: 1px 1px 0 #000; white-space: nowrap; overflow: hidden; transition: width 0.5s ease-in-out; border-right: 2px solid #000; }
+.progress-bar-container::after { content: ''; position: absolute; top: 0; height: 100%; width: 12px; background-color: #28a745; animation: move-and-join 4s infinite linear; }
+@keyframes move-and-join { 0% { left: 100%; } 80% { left: var(--progress-width); } 100% { left: var(--progress-width); } }
+main { flex-grow: 1; padding: 0; margin: 0; max-width: none; }
+section { background-color: #3e3e3e; border: 1px solid #5a5a5a; padding: 10px; margin-bottom: 15px; border-radius: 4px; }
+h2 { font-size: 1em; color: #ffee00; margin-bottom: 12px; border-bottom: 1px solid #ffee00; padding-bottom: 6px; text-transform: uppercase; }
+.update-post { background-color: #2c2c2c; border: 1px dashed #7a7a7a; padding: 8px; margin-bottom: 8px; text-align: left; border-radius: 3px; }
+.update-post h3 { color: #00ffea; margin-top: 0; font-size: 0.7em; }
+a { color: #00aaff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.gallery-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 12px; }
+.gallery-container img { flex-basis: 120px; flex-grow: 1; height: 80px; object-fit: cover; border: 1px solid #5a5a5a; border-radius: 3px; cursor: pointer; }
+.image-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 9999; display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; }
+.image-modal-overlay.active { opacity: 1; visibility: visible; }
+#modal-image { max-width: 90%; max-height: 90vh; border: 2px solid #ffee00; border-radius: 4px; }
+.button-container { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+.btn-download, .main-nav .btn-play { display: inline-block; background-color: #ffaa00; color: #2c2c2c; padding: 6px 15px; text-decoration: none; font-size: 0.7em; font-weight: bold; border: 1px solid #ffffff; box-shadow: 2px 2px 0 #000; }
+.btn-download:hover { background-color: #ffee00; transform: translate(1px, 1px); box-shadow: 1px 1px 0 #000; }
+.btn-play { background-color: #28a745; color: #ffffff; }
+.btn-play:hover { background-color: #33c453; transform: translate(1px, 1px); box-shadow: 1px 1px 0 #000; }
+footer { background-color: #1a1a1a; padding: 15px; margin-top: 20px; border-top: 1px solid #5a5a5a; }
+.footer-content h4 { font-size: 0.8em; margin: 0 0 12px 0; color: #ccc; }
+.social-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
+.footer-btn { display: inline-flex; align-items: center; gap: 8px; padding: 6px 15px; text-decoration: none; font-size: 0.7em; font-weight: bold; border: 1px solid #ffffff; box-shadow: 2px 2px 0 #000; transition: all 0.2s ease-in-out; border-radius: 3px; }
+.footer-btn:hover { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #000; }
+.apoia-btn { background-color: #28a745; color: #ffffff; }
+.apoia-btn:hover { background-color: #33c453; }
+.instagram-btn { background-color: #3e3e3e; color: #ffffff; }
+.instagram-btn:hover { background-color: #5a5a5a; }
+.copyright { font-size: 0.5em; margin: 0; color: #888; }
+
+/* ============================================= */
+/* NOVO: ESTILOS DO CHAT FLUTUANTE               */
+/* ============================================= */
+.chat-tab {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: bottom right;
+    background-color: #ffee00;
+    color: #1e1e1e;
+    padding: 8px 15px;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #000;
+}
+.chat-window {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 350px;
+    height: 500px;
+    background-color: #1e1e1e;
+    border: 1px solid #5a5a5a;
+    border-radius: 6px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    /* Começa escondido */
+    transform: translateY(110%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s;
+}
+.chat-widget.open .chat-window {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.chat-header {
+    background-color: #3e3e3e;
+    padding: 8px 12px;
+    border-bottom: 1px solid #5a5a5a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+}
+.chat-close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.chat-body {
+    flex-grow: 1;
+    /* Isso faz o chat do Chatango preencher o espaço */
+    position: relative;
+}
+/* Estilo para o Chatango preencher o corpo */
+.chat-body > script, .chat-body > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =================================================================== */
+/* RESPONSIVIDADE (COM AJUSTES PARA O CHAT)                            */
+/* =================================================================== */
+@media (max-width: 768px) {
+    .page-container { flex-direction: column; }
+    .dev-sidebar { flex-basis: auto; }
+    .main-nav ul { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; padding: 0 8px; -ms-overflow-style: none; scrollbar-width: none; }
+    .main-nav ul::-webkit-scrollbar { display: none; }
+    .header-overlay h1 { font-size: 1.1em; }
+    h2 { font-size: 0.9em; }
+    .internal-page .main-header { height: 15vh; }
+
+    /* NOVO: Chat em tela cheia no mobile */
+    .chat-window {
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        border: none;
+    }
+}

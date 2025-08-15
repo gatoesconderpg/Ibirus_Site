@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibirus - Mídia</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ADICIONE A LINHA DO FONT AWESOME AQUI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- NOVO: MODAL PARA IMAGEM EXPANDIDA (INVISÍVEL POR PADRÃO) -->
+    <div class="image-modal-overlay">
+        <img src="" alt="Imagem em destaque" id="modal-image">
+    </div>
+
+    <header class="main-header">
+        <div class="slideshow-container"></div>
+        <div class="header-overlay">
+            <p>"Até os itens mais simples podem virar armas letais."</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Informações</a></li>
+            <li><a href="sistemas.html">Sistemas</a></li>
+            <li><a href="media.html" class="active">Mídia</a></li>
+            
+            <a href="#" class="btn-play">JOGAR</a>
+        </ul>
+    </nav>
+    <!-- ============================================= -->
+    <!-- NOVO CONTÊINER DE PÁGINA COM BARRA LATERAL    -->
+    <!-- ============================================= -->
+    <div class="page-container">
+
+        <!-- BARRA LATERAL DE DESENVOLVIMENTO -->
+        <aside class="dev-sidebar">
+            <h3>Desenvolvimento</h3>
+            
+            <div class="progress-item">
+        <p>Sistema de Combate</p>
+        <div class="progress-bar-container" style="--progress-width: 75%;">
+            <div class="progress-bar" style="width: 75%;">75%</div>
+        </div>
+    </div>
+
+            <div class="progress-item">
+                <p>Sistema de Mapa</p>
+                <div class="progress-bar-container" style="--progress-width: 10%;">
+                    <div class="progress-bar" style="width: 10%;">10%</div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <p>Árvore de Habilidades</p>
+                <div class="progress-bar-container" style="--progress-width: 0%;">
+                    <div class="progress-bar" style="width: 0%;">0%</div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <p>Correção de Bugs</p>
+                <div class="progress-bar-container" style="--progress-width: 15%;">
+                    <div class="progress-bar" style="width: 15%;">15%</div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <p>Cadastro e Multiplayer</p>
+                <div class="progress-bar-container" style="--progress-width: 0%;">
+                    <div class="progress-bar" style="width: 0%;">0%</div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <p>Atributos e Status</p>
+                <div class="progress-bar-container" style="--progress-width: 90%;">
+                    <div class="progress-bar" style="width: 90%;">90%</div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <p>Equip. e Custom.</p>
+                <div class="progress-bar-container" style="--progress-width: 75%;">
+                    <div class="progress-bar" style="width: 75%;">75%</div>
+                </div>
+            </div>
+
+        </aside>
+
+    <main>
+        <section>
+            <h2>Uma Janela para Ibirus</h2>
+            <p>
+                As palavras podem descrever a aventura, mas as imagens e os sons lhe dão vida. Clique em qualquer imagem para expandi-la.
+            </p>
+
+            <div class="gallery-container">
+                <img src="img/jogo_01.png" alt="Cena do jogo com vários personagens em uma área de areia.">
+                <img src="img/jogo_02.png" alt="Muitos personagens com seus nomes visíveis em uma vila.">
+                <img src="img/jogo_03.png" alt="Tela de criação de personagem com um avatar de pele roxa.">
+                <img src="img/jogo_04.png" alt="Personagens em uma área de grama, alguns com o nível 1.">
+                <img src="img/jogo_05.png" alt="Diversos personagens interagindo em uma área de grama e areia.">
+                <img src="img/jogo_06.png" alt="Cena de combate com um personagem dizendo 'Sai Bicho Feio!!!'.">
+            </div>
+
+        </section>
+    </main>
+</div>
+
+    <footer>
+    <div class="footer-content">
+        <h4>Siga e Apoie o Projeto</h4>
+        <div class="social-links">
+            <!-- Adicionados os ícones <i> antes do texto -->
+            <a href="https://apoia.se/ibirus" target="_blank" rel="noopener noreferrer" class="footer-btn apoia-btn">
+                <i class="fa-solid fa-hand-holding-dollar"></i> Apoie o Projeto
+            </a>
+            <a href="https://www.instagram.com/ibirusrpg" target="_blank" rel="noopener noreferrer" class="footer-btn instagram-btn">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </div>
+    <p class="copyright">&copy; 2025 GatoEsconde WD Estudio. Todos os direitos reservados.</p>
+</footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <!-- NOVO: SCRIPT EXCLUSIVO PARA A LÓGICA DO MODAL DA GALERIA -->
+    <script src="media-modal.js"></script>
+
+    <!-- O script.js não é necessário aqui se não houver slideshow -->
+    <script src="script.js"></script>
+
+    <!-- =================================================== -->
+<!-- NOVO CHAT FLUTUANTE (ADICIONE EM TODAS AS PÁGINAS)  -->
+<!-- =================================================== -->
+<div class="chat-widget">
+    <!-- 1. A aba flutuante que fica sempre visível -->
+    <div class="chat-tab">
+        <i class="fa-solid fa-comments"></i>
+        <span>Chat</span>
+    </div>
+
+    <!-- 2. A janela do chat, que começa escondida -->
+    <div class="chat-window">
+        <div class="chat-header">
+            <span>Chat da Comunidade</span>
+            <button class="chat-close-btn">&times;</button>
+        </div>
+        <div class="chat-body">
+            <!-- COLE O CÓDIGO DO CHATANGO AQUI -->
+            <!-- Exemplo: <script id="cid00200..." ...></script> -->
+            <script id="cid0020000416207411663" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 200px;height: 300px;">{"handle":"ibirus","arch":"js","styles":{"a":"000000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"000000","l":"000000","m":"000000","n":"FFFFFF","p":"10","q":"000000","r":100,"t":0,"ab":false,"usricon":0,"cv":1,"cvbg":"000000","cvw":75,"cvh":30,"surl":0}}</script>
+            
+            
+        </div>
+    </div>
+</div>
+
+<!-- NOVO SCRIPT PARA CONTROLAR O CHAT FLUTUANTE -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const chatTab = document.querySelector('.chat-tab');
+        const chatWindow = document.querySelector('.chat-widget');
+        const closeBtn = document.querySelector('.chat-close-btn');
+
+        if (chatTab && chatWindow && closeBtn) {
+            // Abre o chat ao clicar na aba
+            chatTab.addEventListener('click', function() {
+                chatWindow.classList.add('open');
+            });
+
+            // Fecha o chat ao clicar no botão 'X'
+            closeBtn.addEventListener('click', function() {
+                chatWindow.classList.remove('open');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
