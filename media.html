@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibirus - Mídia</title>
     <link rel="stylesheet" href="style.css">
-    <!-- ADICIONE A LINHA DO FONT AWESOME AQUI -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <!-- NOVO: MODAL PARA IMAGEM EXPANDIDA (INVISÍVEL POR PADRÃO) -->
+    
     <div class="image-modal-overlay">
         <img src="" alt="Imagem em destaque" id="modal-image">
     </div>
@@ -33,9 +33,9 @@
         </ul>
     </nav>
 
-    
+
     <!-- ============================================= -->
-    <!-- NOVO CONTÊINER DE PÁGINA COM BARRA LATERAL    -->
+    <!--  BARRA LATERAL    -->
     <!-- ============================================= -->
     <div class="page-container">
 
@@ -130,16 +130,14 @@
     <p class="copyright">&copy; 2025 GatoEsconde WD Estudio. Todos os direitos reservados.</p>
 </footer>
 
-    <!-- Scripts -->
+   
     <script src="script.js"></script>
-    <!-- NOVO: SCRIPT EXCLUSIVO PARA A LÓGICA DO MODAL DA GALERIA -->
+    
     <script src="media-modal.js"></script>
-
-    <!-- O script.js não é necessário aqui se não houver slideshow -->
     <script src="script.js"></script>
 
     <!-- =================================================== -->
-<!-- NOVO CHAT FLUTUANTE (ADICIONE EM TODAS AS PÁGINAS)  -->
+<!--  CHAT FLUTUANTE -->
 <!-- =================================================== -->
 <div class="chat-widget">
     <!-- 1. A aba flutuante que fica sempre visível -->
@@ -155,7 +153,7 @@
             <button class="chat-close-btn">&times;</button>
         </div>
         <div class="chat-body">
-            <!-- COLE O CÓDIGO DO CHATANGO AQUI -->
+            <!-- CHATANGO AQUI -->
             <!-- Exemplo: <script id="cid00200..." ...></script> -->
             <script id="cid0020000416207411663" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 200px;height: 300px;">{"handle":"ibirus","arch":"js","styles":{"a":"000000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"000000","l":"000000","m":"000000","n":"FFFFFF","p":"10","q":"000000","r":100,"t":0,"ab":false,"usricon":0,"cv":1,"cvbg":"000000","cvw":75,"cvh":30,"surl":0}}</script>
             
@@ -164,7 +162,7 @@
     </div>
 </div>
 
-<!-- NOVO SCRIPT PARA CONTROLAR O CHAT FLUTUANTE -->
+<!--  SCRIPT PARA CONTROLAR O CHAT FLUTUANTE -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const chatTab = document.querySelector('.chat-tab');
